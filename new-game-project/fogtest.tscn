@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://d141w67cgpkgs"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_n6ue4"]
+
+[sub_resource type="Sky" id="Sky_x5m15"]
+sky_material = SubResource("ProceduralSkyMaterial_n6ue4")
+
+[sub_resource type="Environment" id="Environment_16qjj"]
+background_mode = 2
+sky = SubResource("Sky_x5m15")
+fog_enabled = true
+fog_mode = 1
+fog_light_color = Color(0.431345, 0.465213, 0.518443, 1)
+fog_density = 1.0
+fog_height_density = 9.0947
+fog_depth_begin = 42.2
+fog_depth_end = 4000.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_16qjj")
+
+[node name="Camera3D" type="Camera3D" parent="."]
